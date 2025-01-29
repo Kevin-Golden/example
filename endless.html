@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            height: 200vh; /* Set a large height to demonstrate scrolling */
+            background: linear-gradient(-45deg, #ff4e50, #f9d423, #24C6DC, #514A9D);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+        
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .header {
+            font-size: 30px;
+            color: white;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .mr-clean {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            z-index: 1000;
+        }
+
+        .content {
+            padding: 20px;
+            font-size: 24px;
+            color: white;
+            text-align: center;
+        }
+    </style>
+    <title>MR.CLEAN</title>
+    <link rel="icon" href="https://www.pngkey.com/png/full/640-6407262_post-new-mr-clean.png" type="image/png">
+</head>
+<body>
+    <div class="header">Mr. Golden = Mr. Clean</div>
+    <div class="content">
+        <h1>Welcome to the Endless Page</h1>
+        <p>This is where you can add content that never ends. Customize it as you wish!</p>
+        <p>Scroll down to see Mr. Clean always watching over you!</p>
+        <!-- Add more content here to demonstrate the scrolling effect -->
+    </div>
+    <div class="mr-clean">
+        <img src="https://www.pngkey.com/png/full/640-6407262_post-new-mr-clean.png" alt="Mr. Clean" style="height: 100px;">
+    </div>
+</body>
+</html>
