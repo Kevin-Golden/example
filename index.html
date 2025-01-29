@@ -8,6 +8,7 @@
             margin: 0;
             height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             background: linear-gradient(-45deg, #ff4e50, #f9d423, #24C6DC, #514A9D);
@@ -21,14 +22,20 @@
             100% { background-position: 0% 50%; }
         }
 
+        .title {
+            font-size: 30px;
+            color: white;
+            margin-bottom: 30px;
+        }
+
         .button-container {
             display: flex;
-            gap: 20px;
+            gap: 40px;
         }
 
         .button {
-            padding: 20px;
-            font-size: 20px;
+            padding: 30px;
+            font-size: 30px;
             border: none;
             cursor: pointer;
             background: none;
@@ -38,6 +45,7 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>📖</text></svg>">
 </head>
 <body>
+    <div class="title">Kevin Golden's Example Site</div>
     <div class="button-container">
         <button class="button" onclick="location.href='desc.html'">📙</button>
         <button class="button" onclick="location.href='endless.html'">🗺️</button>
