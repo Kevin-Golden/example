@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(-45deg, #ff4e50, #f9d423, #24C6DC, #514A9D);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+        
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .button-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .button {
+            padding: 20px;
+            font-size: 20px;
+            border: none;
+            cursor: pointer;
+            background: none;
+        }
+    </style>
+    <title>Home</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>📖</text></svg>">
+</head>
+<body>
+    <div class="button-container">
+        <button class="button" onclick="location.href='desc.html'">📙</button>
+        <button class="button" onclick="location.href='endless.html'">🗺️</button>
+        <button class="button" onclick="location.href='maps.html'">
+            <img src="https://www.pngkey.com/png/full/640-6407262_post-new-mr-clean.png" alt="Mr. Clean" style="height: 40px;">
+        </button>
+    </div>
+</body>
+</html>
