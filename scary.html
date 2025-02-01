@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scary Page</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        @keyframes pulse {
+            0% { background-color: black; }
+            50% { background-color: red; }
+            100% { background-color: black; }
+        }
+        .pulse {
+            animation: pulse 1s infinite;
+        }
+        .hidden {
+            display: none;
+        }
+        input[type="text"] {
+            display: none;
+            font-size: 20px;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body class="pulse">
+    <div id="message"></div>
+    <input type="text" id="nameInput" placeholder="Enter name here">
+    <script>
+        const messages = [
+            "How did you find this...?",
+            "Who told you where I was?",
+            "Do you know my name?"
+        ];
+        let currentIndex = 0;
+        const messageDiv = document.getElementById('message');
+        const nameInput = document.getElementById('nameInput');
+
+        function showNextMessage() {
+            if (currentIndex < messages.length) {
+                messageDiv.innerText = messages[currentIndex];
+                currentIndex++;
+                setTimeout(showNextMessage, 3000);
+            } else {
+                messageDiv.innerText = "";
+                nameInput.style.display = 'block';
+            }
+        }
+
+        function checkName() {
+            const userInput = nameInput.value.trim().toLowerCase();
+            if (userInput === "mr.clean" || userInput === "mr clean") {
+                messageDiv.innerText = "Good Job";
+                setTimeout(() => {
+                    window.location.href = 'index.html';
+                }, 2000);
+            } else {
+                messageDiv.innerText = `${nameInput.value}...? No. Guess again!`;
+            }
+        }
+
+        nameInput.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter') {
+                checkName();
+            }
+        });
+
+        showNextMessage();
+    </script>
+</body>
+</html>
