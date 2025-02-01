@@ -26,6 +26,9 @@
         document.addEventListener('keypress', function(event) {
             if (event.key === '=') {
                 document.body.style.backgroundColor = 'red';
+                setTimeout(function() {
+                    window.location.href = 'scary.html';
+                }, 3000);
             }
         });
     </script>
