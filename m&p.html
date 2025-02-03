@@ -42,10 +42,35 @@
             justify-content: center;
             border-radius: 15px;
         }
+        #navbar {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .nav-button {
+            font-family: Arial, sans-serif;
+            font-size: 1em;
+            font-weight: bold;
+            color: #ffffff;
+            background-color: #FF69B4;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            border-radius: 5px;
+        }
+
+        .nav-button:hover {
+            background-color: #FF1493;
     </style>
 </head>
 <body>
+    <div id="navbar">
+        <button class="nav-button" onclick="location.href='index.html'">Home</button>
     <h1>History</h1>
+</div>
     <h2>Maps & Paintings</h2>
     <div class="button-container">
         <div class="button-frame" onclick="location.href='maps.html'">
